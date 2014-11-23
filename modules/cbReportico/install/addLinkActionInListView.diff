@@ -1,0 +1,19 @@
+Index: include/ListView/ListViewController.php
+===================================================================
+--- include/ListView/ListViewController.php	(revisión: 6112)
++++ include/ListView/ListViewController.php	(copia de trabajo)
+@@ -467,8 +467,14 @@
+ 
+ 			//Added for Actions ie., edit and delete links in listview
+ 			$actionLinkInfo = "";
++			if ($module=='cbReportico') {
++				$reportico_link = "index.php?module=cbReportico&action=ReporticoView&record=".$recordId."&clear_session=1";
++				$actionLinkInfo .= "<a href=\"$reportico_link\">".getTranslatedString('VIEW_REPORT','cbReportico')."</a> ";
++			}			
+ 			if(isPermitted($module,"EditView","") == 'yes'){
+ 				$edit_link = $this->getListViewEditLink($module,$recordId);
++				if($actionLinkInfo != "" && $edit_link != "")
++					$actionLinkInfo .=  " | ";				
+ 				if(isset($navigationInfo['start']) && $navigationInfo['start'] > 1 && $module != 'Emails') {
+ 					$actionLinkInfo .= "<a href=\"$edit_link&start=".
+ 						$navigationInfo['start']."\">".getTranslatedString("LNK_EDIT",

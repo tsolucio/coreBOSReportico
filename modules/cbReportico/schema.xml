@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_cbreportico</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_cbreportico` (
+  `cbreporticoid` int(11) DEFAULT NULL,
+  `reportico_no` varchar(100) DEFAULT NULL,
+  `report` varchar(250) DEFAULT NULL,
+  `project` varchar(250) DEFAULT NULL,
+  `ini_execute_mode` varchar(250) DEFAULT NULL,
+  `ini_output_format` varchar(250) DEFAULT NULL,
+  `ini_show_detail` varchar(3) DEFAULT NULL,
+  `ini_show_graph` varchar(3) DEFAULT NULL,
+  `ini_show_group_headers` varchar(3) DEFAULT NULL,
+  `ini_show_group_trailers` varchar(3) DEFAULT NULL,
+  `ini_show_column_headers` varchar(3) DEFAULT NULL,
+  `ini_show_criteria` varchar(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_cbreporticocf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_cbreporticocf` (
+  `cbreporticoid` int(11) NOT NULL,
+  PRIMARY KEY (`cbreporticoid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

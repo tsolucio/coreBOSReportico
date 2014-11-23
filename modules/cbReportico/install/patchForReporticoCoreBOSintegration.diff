@@ -1,0 +1,36 @@
+diff --git a/reportico.php b/reportico.php
+index 50a3779..7b02e7c 100644
+--- a/reportico.php
++++ b/reportico.php
+@@ -2891,7 +2891,8 @@ class reportico extends reportico_object
+     function derive_ajax_operation() 
+     {
+         // Fetch URL path to reportico and set URL path to the runner
+-        $this->reportico_url_path = get_reportico_url_path();
++	if($this->reportico_url_path == '')
++		$this->reportico_url_path = get_reportico_url_path();
+         if ( !$this->url_path_to_reportico_runner )
+             $this->url_path_to_reportico_runner = $this->reportico_url_path."run.php";
+ 
+diff --git a/smarty/libs/Smarty.class.php b/smarty/libs/Smarty.class.php
+index 51b5cfa..f0888cd 100644
+--- a/smarty/libs/Smarty.class.php
++++ b/smarty/libs/Smarty.class.php
+@@ -58,10 +58,16 @@ define('SMARTY_PHP_QUOTE',      1);
+ define('SMARTY_PHP_REMOVE',     2);
+ define('SMARTY_PHP_ALLOW',      3);
+ 
++/***TSOLUCIO****
++ *fix path to include vtiger smarty **
++ ***************/
++set_include_path(get_include_path(). PATH_SEPARATOR ."../../../");
++require_once('Smarty/libs/Smarty.class.php');
++
+ /**
+  * @package Smarty
+  */
+-class Smarty
++class Reportico_Smarty extends Smarty /***END TSOLUCIO****/
+ {
+     /**#@+
+      * Smarty Configuration Section
