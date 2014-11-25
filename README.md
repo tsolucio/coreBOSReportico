@@ -8,7 +8,7 @@ This project adds the opensource [Reportico](http://www.reportico.org/site/index
 Reportico is an advanced reporting tool oriented towards ease of creation for administrators and ease of use for the users. Together with coreBOS, that holds all your data, the tandem is very useful to get those reports the coreBOS system can't generate.
 
 **How to install**
-- Press a download ZiP button and go to your coreBOS -> Settings -> Module Manager -> Custom Modules and Import the module cbReportico.
+- Click in Release tab and download coreBOSReportico.zip, after got to your coreBOS -> Settings -> Module Manager -> Custom Modules and Import the module cbReportico.
 - When the importation finish go to reportico.org and download the last version. Actually this integration is working version 4.2
 - When you downloaded reportico, please copy reportico folder into you corebos/modules/cbReportico/ with the name **reportico** for the folder
 - After that you have to apply the pacth that you can find into modules/cbReportico/install/ called **patchForReporticoCoreBOSintegration.diff** to modify reportico. We need to modify Reportico because this is redeclaring Smarty class. Remember that coreBOS is using Smarty too.
