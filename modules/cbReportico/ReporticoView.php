@@ -52,9 +52,7 @@ global $adb,$log,$current_user,$root_directory,$site_URL;
    
     //date_default_timezone_set(@date_default_timezone_get());
 
-    $document_root = $_SERVER['DOCUMENT_ROOT'];
-    list($nothing, $vtpath) = explode($document_root, $root_directory);
-    $reportico_url_path = $vtpath.'/modules/cbReportico/reportico/';
+    $reportico_url_path = $site_URL.'/modules/cbReportico/reportico/';
     $_SESSION['reportico_url_path'] = $reportico_url_path;
     
     error_reporting(E_ERROR);
