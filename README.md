@@ -8,9 +8,9 @@ This project adds the opensource [Reportico](http://www.reportico.org/site/index
 Reportico is an advanced reporting tool oriented towards ease of creation for administrators and ease of use for the users. Together with coreBOS, that holds all your data, the tandem is very useful to get those reports the coreBOS system can't generate.
 
 **How to install**
-- You have two ways to install the module:
-* The classic Vtiger CRM method: click in Release tab and download coreBOSReportico.zip, after go to your coreBOS -> Settings -> Module Manager -> Custom Modules and Import the module cbReportico.
-* New coreBOS method. Copye the url project "https://github.com/tsolucio/coreBOSReportico.git" go to your coreBOS -> Settings -> Module Manager -> Custom Modules -> Import  and paste the url in the field "Install from URL".
+- **You have two ways to install the module:**
+	- The classic Vtiger CRM method: click in Release tab and download coreBOSReportico.zip, after go to your coreBOS -> Settings -> Module Manager -> Custom Modules and Import the module cbReportico.
+	- New coreBOS method. Copye the url project "https://github.com/tsolucio/coreBOSReportico.git" go to your coreBOS -> Settings -> Module Manager -> Custom Modules -> Import  and paste the url in the field "Install from URL".
 - When the importation finish go to reportico.org and download the last version. Actually this integration is working version 4.2
 - When you downloaded reportico, please copy reportico folder into you corebos/modules/cbReportico/ with the name **reportico** for the folder
 - After that you have to apply the pacth that you can find into modules/cbReportico/install/ called **patchForReporticoCoreBOSintegration.diff** to modify reportico. We need to modify Reportico because this is redeclaring Smarty class. Remember that coreBOS is using Smarty too.
@@ -18,7 +18,7 @@ Reportico is an advanced reporting tool oriented towards ease of creation for ad
 - Ok now you can begin tu use the module, but before I want to mention an patch for your coreBOS. In install directory you can find the **addLinkActionInListView.diff** , this patch modify your coreBOS to add action to the cbReportico registers in List view. This action is for open the report directly, but if you don't want to modify you will have to open the registir to clic in **View Report** in detail view action.
 
 **How to use**
-- After the installation , you have to got to Settings -> Module Manager -> Reportico Settings. Here you have a menu to access to Reportico Administration. This is for access wit admin user, the first time you have to define your admin password and after that you can create new reportico projects and reports.
+- After the installation , you have to go to Settings -> Module Manager -> Reportico Settings. Here you have a menu to access to Reportico Administration. This is for access wit admin user, the first time you have to define your admin password and after that you can create new reportico projects and reports.
 
 - When you create a report you have tu choose in Database Type the value **Framework (e.g. Joomla). Our corebosrun.php define the database values from coreBOS/config.inc.php to set in Reportico project. 
 <code>
