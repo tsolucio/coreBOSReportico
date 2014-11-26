@@ -20,7 +20,7 @@ Reportico is an advanced reporting tool oriented towards ease of creation for ad
 **How to use**
 - After the installation , you have to go to Settings -> Module Manager -> Reportico Settings. Here you have a menu to access to Reportico Administration. This is for access wit admin user, the first time you have to define your admin password and after that you can create new reportico projects and reports.
 
-- When you create a report you have tu choose in Database Type the value **Framework (e.g. Joomla). Our corebosrun.php define the database values from coreBOS/config.inc.php to set in Reportico project. 
+- When you create a report you have tu choose in Database Type the value **Framework (e.g. Joomla)**. Our corebosrun.php define the database values from coreBOS/config.inc.php to set in Reportico project. 
 <code>
 define('SW_FRAMEWORK_DB_DRIVER',$dbconfig['db_type']);
 define('SW_FRAMEWORK_DB_USER', $dbconfig['db_username']);
@@ -28,10 +28,8 @@ define('SW_FRAMEWORK_DB_PASSWORD',$dbconfig['db_password']);
 ...
 </code>
 
-- When you create your project and reports, you have to remember the name of these to set the reports in Reportico module.
-- Go to Reportico module and create new register. Here you have to indicate the project name and the report name without string **.xml**
-We need this to find the project folder into modules/cbReportico/reportico/projects/ and the report name to find the xml that contanins all the report configuration to execute.
-- The other parameters into Reportico module is for show or not some parameters into Reportico when report is PREPARE or EXECUTE.
+- When you create your project and reports, you have to return to Reportico module , on List View, and press the **Load New Reports** button to load this new reports to coreBOS.
+- After this, if you want, you can edit this register to change the others parameters for show or not some parameters into Reportico when report is PREPARE or EXECUTE.
 - Why we create registers into Reportico module to execute reports so instead of embedded totally reportico in the module?
 We do this because these registers permit us to assign privileges to the reports by the assigned user or group and permit to the user to create more fields to create some filters to sort and find more easy the reports.
 
