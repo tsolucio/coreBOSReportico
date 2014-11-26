@@ -15,10 +15,11 @@ $mod_strings = Array(
 
 	'LBL_CUSTOM_INFORMATION' => 'Custom Information',
 	'LBL_CBREPORTICO_INFORMATION' => 'Reportico Information',
-        'LBL_DESCRIPTION_INFORMATION' => 'Description',
+	'LBL_DESCRIPTION_INFORMATION' => 'Description',
 
 	'REPORTICO_NO' => 'Report No',
-        'VIEW_REPORT' => 'View Report',
+	'VIEW_REPORT' => 'View Report',
+	'Load New Reports' => 'Load New Reports',
 );
 
 ?>
