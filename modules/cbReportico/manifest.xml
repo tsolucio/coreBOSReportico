@@ -34,6 +34,7 @@
   `cbreporticoid` int(11) DEFAULT NULL,
   `reportico_no` varchar(100) DEFAULT NULL,
   `report` varchar(250) DEFAULT NULL,
+  `xmlreport` varchar(250) DEFAULT NULL,
   `project` varchar(250) DEFAULT NULL,
   `ini_execute_mode` varchar(250) DEFAULT NULL,
   `ini_output_format` varchar(250) DEFAULT NULL,
@@ -102,6 +103,26 @@
 </entityidentifier>
 </field>
 <field>
+<fieldname>xmlreport</fieldname>
+<uitype>1</uitype>
+<columnname>xmlreport</columnname>
+<tablename>vtiger_cbreportico</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>XML Report Name</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>3</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>V~M</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>0</masseditable>
+</field>
+<field>
 <fieldname>project</fieldname>
 <uitype>1</uitype>
 <columnname>project</columnname>
@@ -111,7 +132,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>3</sequence>
+<sequence>4</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~M</typeofdata>
 <quickcreate>1</quickcreate>
@@ -131,7 +152,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue>PREPARE</defaultvalue>
-<sequence>4</sequence>
+<sequence>5</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~M</typeofdata>
 <quickcreate>1</quickcreate>
@@ -157,7 +178,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue>HTML</defaultvalue>
-<sequence>5</sequence>
+<sequence>6</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~M</typeofdata>
 <quickcreate>1</quickcreate>
@@ -431,6 +452,16 @@
 <linkurl><![CDATA[index.php?module=cbReportico&action=ReporticoView&record=$RECORD$&clear_session=1]]></linkurl>
 <linkicon><![CDATA[]]></linkicon>
 <sequence>0</sequence>
+<handler_path><![CDATA[]]></handler_path>
+<handler_class><![CDATA[]]></handler_class>
+<handler><![CDATA[]]></handler>
+</customlink>
+<customlink>
+<linktype>LISTVIEWBASIC</linktype>
+<linklabel>Load New Reports</linklabel>
+<linkurl><![CDATA[javascript:gotourl('index.php?module=cbReportico&action=cbReporticoAjax&file=getreports')]]></linkurl>
+<linkicon><![CDATA[]]></linkicon>
+<sequence>1</sequence>
 <handler_path><![CDATA[]]></handler_path>
 <handler_class><![CDATA[]]></handler_class>
 <handler><![CDATA[]]></handler>
