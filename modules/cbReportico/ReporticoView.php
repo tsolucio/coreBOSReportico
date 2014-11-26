@@ -27,7 +27,7 @@ global $adb,$log,$current_user,$root_directory,$site_URL;
         
         $reportico_no = $adb->query_result($res,0,'reportico_no');
         $project = $adb->query_result($res,0,'project');
-        $report = $adb->query_result($res,0,'report');
+        $report = $adb->query_result($res,0,'xmlreport');
         $initial_execute_mode = $adb->query_result($res,0,'ini_execute_mode');
         $initial_output_format = $adb->query_result($res,0,'ini_output_format');        
         $initial_show_detail = $adb->query_result($res,0,'ini_show_detail') == 1 ? 'show':'hide';
