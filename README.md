@@ -33,9 +33,6 @@ define('SW_FRAMEWORK_DB_PASSWORD',$dbconfig['db_password']);
 - Why we create registers into Reportico module to execute reports so instead of embedded totally reportico in the module?
 We do this because these registers permit us to assign privileges to the reports by the assigned user or group and permit to the user to create more fields to create some filters to sort and find more easy the reports.
 
-**KNOWN PROBLEMS**
-- Now if you access like admin user, we have a problems with CSS, because coreBOS replace some classes like ul class defined to show like tabs.
-
 
 
 **Thank you** very much for your help and contribution.
