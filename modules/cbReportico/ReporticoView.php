@@ -76,8 +76,6 @@ global $adb,$log,$current_user,$root_directory,$site_URL;
         $q->session_namespace = "vtigeradmin";
         $q->reportico_url_path = $reportico_url_path;
         $q->show_refresh_button = true;
-		$q->bootstrap_styles = "3";
-		$q->bootstrap_preloaded = true;
         $q->reportico_ajax_script_url = $reportico_url_path.'corebosrun.php';
         $q->url_path_to_reportico_runner = $reportico_url_path.'corebosrun.php';
         $q->url_path_to_calling_script = $reportico_url_path.'corebosrun.php';
