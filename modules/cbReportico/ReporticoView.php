@@ -58,7 +58,7 @@ global $adb,$log,$current_user,$root_directory,$site_URL;
     error_reporting(E_ERROR);
     
     $q = new reportico();
-    define('SW_FRAMEWORK_DB_DRIVER',$adb->dbType);
+    define('SW_FRAMEWORK_DB_DRIVER','pdo_mysql');
     define('SW_FRAMEWORK_DB_USER', $adb->userName);
     define('SW_FRAMEWORK_DB_PASSWORD',$adb->userPassword);
     define('SW_FRAMEWORK_DB_HOST',$adb->dbHostName); // Use ip:port to specifiy a non standard port

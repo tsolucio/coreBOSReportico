@@ -186,7 +186,7 @@
     require_once('../../../config.inc.php');
 
     
-    define('SW_FRAMEWORK_DB_DRIVER',$dbconfig['db_type']);
+    define('SW_FRAMEWORK_DB_DRIVER','pdo_mysql');
     define('SW_FRAMEWORK_DB_USER', $dbconfig['db_username']);
     define('SW_FRAMEWORK_DB_PASSWORD',$dbconfig['db_password']);
     define('SW_FRAMEWORK_DB_HOST',$dbconfig['db_server'].$dbconfig['db_port']); // Use ip:port to specifiy a non standard port
